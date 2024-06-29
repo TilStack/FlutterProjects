@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:navigator_bar_works/utils/constants.dart';
 import 'package:navigator_bar_works/widgets/card_contain.dart';
 import 'package:navigator_bar_works/widgets/grid_card.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
-import '../widgets/buildItem.dart';
 
 class FirstNavigatorBar extends StatefulWidget {
   const FirstNavigatorBar({super.key});
@@ -15,6 +15,7 @@ class FirstNavigatorBar extends StatefulWidget {
 }
 
 class _FirstNavigatorBarState extends State<FirstNavigatorBar> {
+  int selectedItem = 0;
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
@@ -61,12 +62,12 @@ class _FirstNavigatorBarState extends State<FirstNavigatorBar> {
               ),
             ),
 
-          // Cutum navigation Bar
+          // Custum navigation Bar
           Positioned(
     bottom: 18,
     left: 18,
     right: 18,
-    height: 90
+    height: 86
     ,child: Container(
             decoration: BoxDecoration(
               border: Border.all(width: 2,color: theme.scaffoldBackgroundColor),
@@ -90,21 +91,35 @@ class _FirstNavigatorBarState extends State<FirstNavigatorBar> {
 
           // Button Navigation Bar item
           Positioned(
-            bottom: 16,
+            bottom: 18,
             left: 22,
             right: 22,
-            height: 85
+            height: 86
           ,child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisSize: MainAxisSize.max
           ,children: [
             BuildItem(Icons.home_outlined,0),
-            BuildItem(Icons.home_outlined,0),
-            BuildItem(Icons.home_outlined,0),
-            BuildItem(Icons.home_outlined,0),
+            BuildItem(Icons.apps,1),
+            BuildItem(Icons.notifications_active_rounded,2),
+            BuildItem(Icons.settings_outlined,3),
           ],)),
         ],
+      ),
+    );
+  }
+  Widget BuildItem(IconData icon, index){
+    return ZoomTapAnimation(
+      onTap: (){
+          setState(() {
+            selectedItem = index;
+          });
+      },
+      child: Icon(
+          icon,
+          color: selectedItem == index? SECOND_COLOR: Colors.yellow,
+          size: selectedItem == index ? 35 :  30
       ),
     );
   }
@@ -116,15 +131,16 @@ class MyClipper extends CustomClipper<Path> {
     final path = Path();
     path.moveTo(0, 0);
     path.lineTo(size.width, 0);
-    path.lineTo(64,size.width);
-    path.lineTo(0,size.height);
-    path.lineTo(0,0);
+    path.lineTo(64, size.height);
+    path.lineTo(0, size.height);
+    path.lineTo(0, 0);
     path.close();
+
     return path;
   }
 
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    return false;
+    return true;
   }
 }
