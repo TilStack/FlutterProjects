@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigator_bar_works/screens/first_navigatorbar.dart';
+import 'package:navigator_bar_works/screens/second_spineNavigatorbar.dart';
 import 'package:navigator_bar_works/utils/data.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: FirstNavigatorBar(),
+      home: SpinNavigatorBar(),
     );
   }
 }
