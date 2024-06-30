@@ -19,3 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 ## Navigator bar links for help
 
 The First one : https://www.youtube.com/watch?v=tM9d19eGCtE&ab_channel=ProgrammingWithFlexZ
+The second One: https://www.youtube.com/watch?v=lPTb1ddTQ8o&ab_channel=RetroPortalStudio
