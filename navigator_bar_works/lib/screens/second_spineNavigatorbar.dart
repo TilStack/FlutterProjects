@@ -55,6 +55,7 @@ class _SpinNavigatorBarState extends State<SpinNavigatorBar> {
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
+        centerTitle: true,
         title: const Text("Spinner Bottom Navigator Bar"),
         leading: Image.asset(
           "assets/png/till.png",

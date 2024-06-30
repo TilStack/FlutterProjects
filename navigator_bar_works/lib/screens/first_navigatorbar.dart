@@ -22,6 +22,12 @@ class _FirstNavigatorBarState extends State<FirstNavigatorBar> {
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
+        centerTitle: true,
+        leading: Image.asset(
+          "assets/png/till.png",
+          height: 10,
+          width: 10,
+        ),
         title: const Text("Blurrer Bottom Navigator Bar"),
       ),
       body: Stack(
