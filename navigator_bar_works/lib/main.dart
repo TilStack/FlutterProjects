@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_bar_works/screens/first_navigatorbar.dart';
 import 'package:navigator_bar_works/screens/second_spineNavigatorbar.dart';
 import 'package:navigator_bar_works/screens/third_convexNavigotorBar.dart';
 import 'package:navigator_bar_works/utils/data.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: ConvexNavigatorBar(),
+      home: FirstNavigatorBar(),
     );
   }
 }
