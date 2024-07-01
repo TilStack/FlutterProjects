@@ -16,16 +16,21 @@ class _Thanos_DeleteState extends State<Thanos_Delete> {
   Widget build(BuildContext context) {
     List<Map<String, String>> cardData = [
       {'title': 'The Great Gatsby', 'subtitle': 'F. Scott Fitzgerald', 'image': 'assets/png/cc.png'},
-      {'title': 'To Kill a Mockingbird', 'subtitle': 'Harper Lee', 'image': 'assets/png/til.png'},
-      {'title': '1984', 'subtitle': 'George Orwell', 'image': 'assets/png/tillwhite.png'},
+      {'title': 'To Kill a Mockingbird', 'subtitle': 'Harper Lee', 'image': 'assets/png/a.jpg'},
+      {'title': '1984', 'subtitle': 'George Orwell', 'image': 'assets/png/e.jpg'},
+      {'title': 'Kill a Mock', 'subtitle': 'Harper Orwell', 'image': 'assets/png/cc.png'},
+      {'title': 'Great', 'subtitle': 'Scott Fit', 'image': 'assets/png/rt.jpg'},
     ];
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: SECOND_COLOR,
+        centerTitle: true,
+        backgroundColor: Colors.white,
         foregroundColor: FIRST_COLOR,
         title: Text(widget.title,style: GoogleFonts.poppins(
-          letterSpacing: 4
-        ),),
+          letterSpacing: 3
+        ),
+        ),
+        leading: Container(margin:EdgeInsets.only(left: 5),child: Image.asset("assets/png/till.png")),
       ),
       body: Container(
         margin: const EdgeInsets.only(top: 20),
@@ -41,7 +46,15 @@ class _Thanos_DeleteState extends State<Thanos_Delete> {
             );
           },
         ),
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: FIRST_COLOR,
+        foregroundColor: Colors.white,
+        onPressed: (){
+        },
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
