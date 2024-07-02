@@ -14,21 +14,37 @@ class _LoadingAnimationState extends State<LoadingAnimation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Simple Loading', style: GoogleFonts.poppins(color:Colors.black),),
+        title: Text(
+          'Simple Loading',
+          style: GoogleFonts.poppins(color: Colors.black),
+        ),
         centerTitle: true,
-        leading: Image.asset("assets/till.png",height: 10,width: 10,),
+        leading: Image.asset(
+          "assets/till.png",
+          height: 10,
+          width: 10,
+        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: LoadingAnimationWidget.staggeredDotsWave(color: Colors.black, size: 100),
+            child: LoadingAnimationWidget.staggeredDotsWave(
+                color: Colors.black, size: 100),
           ),
-          SizedBox(height: 12,),
-          Text("Loading, Please wait...",style: GoogleFonts.poppins(color: Colors.black87),),
-          SizedBox(height: 12,),
+          const SizedBox(
+            height: 12,
+          ),
+          Text(
+            "Loading, Please wait...",
+            style: GoogleFonts.poppins(color: Colors.black87),
+          ),
+          const SizedBox(
+            height: 12,
+          ),
           Center(
-            child: LoadingAnimationWidget.newtonCradle(color: Colors.black, size: 100),
+            child: LoadingAnimationWidget.newtonCradle(
+                color: Colors.black, size: 100),
           )
         ],
       ),
