@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:loading_effet_works/Screens/loadingHomePage.dart';
 import 'package:loading_effet_works/constants/data.dart';
 
+import 'Screens/loading_animationPage.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: HomePage(),
+      home: LoadingAnimation(),
     );
   }
 }
