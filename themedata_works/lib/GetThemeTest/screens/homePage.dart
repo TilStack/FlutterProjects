@@ -42,6 +42,7 @@ class _HomePageState extends State<HomePage> {
           ),
           ElevatedButton(
             onPressed: () {
+              // Fonction pour le changement du theme.
               Get.isDarkMode
                   ? Get.changeTheme(ThemeData.light())
                   : Get.changeTheme(ThemeData.dark());

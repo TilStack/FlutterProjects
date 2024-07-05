@@ -16,25 +16,29 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: (){},
+          onPressed: () {},
           icon: const Icon(Icons.more_vert),
         ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: Consumer<ThemeProvider>(
-              builder: (context,themeProvider, child ) {
-                return Switch(
-                    activeColor: Colors.white,
-                    inactiveThumbColor: Colors.white,
-                    thumbColor: const MaterialStatePropertyAll(Colors.black),
-                    inactiveTrackColor: Colors.transparent,
-                    thumbIcon: MaterialStatePropertyAll(themeProvider.isSelected? const Icon(Icons.nights_stay): const Icon(Icons.sunny)),
-                    value: themeProvider.isSelected , onChanged: (value){
-                    themeProvider.toggleTheme();
-                });
-              }
-            ),
+                // Consumer pour la gestion du theme.
+                builder: (context, themeProvider, child) {
+              return Switch(
+                  activeColor: Colors.white,
+                  inactiveThumbColor: Colors.white,
+                  thumbColor: const MaterialStatePropertyAll(Colors.black),
+                  inactiveTrackColor: Colors.transparent,
+                  thumbIcon: MaterialStatePropertyAll(themeProvider.isSelected
+                      ? const Icon(Icons.nights_stay)
+                      : const Icon(Icons.sunny)),
+                  value: themeProvider.isSelected,
+                  onChanged: (value) {
+                    themeProvider
+                        .toggleTheme(); // Fonction pour le changement du theme.
+                  });
+            }),
           ),
         ],
       ),
@@ -43,48 +47,43 @@ class _HomePageState extends State<HomePage> {
         child: Center(
           child: Column(
             children: [
-              Text(
-                  'Douala',
+              Text('Douala',
                   style: GoogleFonts.poppins(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w500
-                  )
+                      fontSize: 30, fontWeight: FontWeight.w500)),
+              const SizedBox(
+                height: 30,
               ),
-              const SizedBox(height: 30,),
-              Consumer<ThemeProvider>(
-                builder: (context,themeProvider,child) {
-                  return Icon(
-                      themeProvider.isSelected?Icons.nights_stay:Icons.sunny,
-                      size: 250,
-                      color:
-                        themeProvider.isSelected?Colors.white:Colors.orange
-                  );
-                }
+              Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
+                return Icon(
+                    themeProvider.isSelected ? Icons.nights_stay : Icons.sunny,
+                    size: 250,
+                    color: themeProvider.isSelected
+                        ? Colors.white
+                        : Colors.orange);
+              }),
+              const SizedBox(
+                height: 30,
               ),
-              const SizedBox(height: 30,),
               Text(
                 '20 C',
                 style: GoogleFonts.poppins(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold
-                ),
+                    fontSize: 30, fontWeight: FontWeight.bold),
               ),
               Text(
                 'Good Afternoon',
                 style: GoogleFonts.poppins(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: Colors.grey.shade500
-                ),
+                    color: Colors.grey.shade500),
               ),
               Text(
                 'SSADI',
                 style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold
-                ),
+                    fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 50,),
+              const SizedBox(
+                height: 50,
+              ),
               const SizedBox(
                 height: 50,
                 width: 50,
@@ -92,14 +91,18 @@ class _HomePageState extends State<HomePage> {
                   thickness: 3,
                 ),
               ),
-              const SizedBox(height: 50,),
+              const SizedBox(
+                height: 50,
+              ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
                       Icon(Icons.wb_twighlight),
-                      Text('SUNRISE',),
+                      Text(
+                        'SUNRISE',
+                      ),
                       Text('17:00')
                     ],
                   ),
@@ -113,7 +116,9 @@ class _HomePageState extends State<HomePage> {
                   Column(
                     children: [
                       Icon(Icons.air),
-                      Text('Wind',),
+                      Text(
+                        'Wind',
+                      ),
                       Text('4m/s')
                     ],
                   ),
@@ -127,7 +132,9 @@ class _HomePageState extends State<HomePage> {
                   Column(
                     children: [
                       Icon(Icons.thermostat),
-                      Text('Tempereture',),
+                      Text(
+                        'Tempereture',
+                      ),
                       Text('23')
                     ],
                   ),

@@ -3,14 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:themedata_works/ProviderThemeTest/screens/homePage.dart';
 import 'package:themedata_works/ProviderThemeTest/theme/themeProvider.dart';
 
-
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context)=> ThemeProvider(),
-      child: const MyApp(),
-    )
-  );
+  runApp(ChangeNotifierProvider(
+    // ChangeNotifierProvider pour la gestion du theme.
+    create: (context) => ThemeProvider(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,8 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        theme: Provider.of<ThemeProvider>(context).themeData,
-        home: HomePage()
-    );
+        theme: Provider.of<ThemeProvider>(context)
+            .themeData, // ThemeProvider pour le changement du theme.
+        home: HomePage());
   }
 }
