@@ -12,6 +12,7 @@ class LoadingAnimation extends StatefulWidget {
 class _LoadingAnimationState extends State<LoadingAnimation> {
   @override
   Widget build(BuildContext context) {
+    // ThemeData theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -43,6 +44,7 @@ class _LoadingAnimationState extends State<LoadingAnimation> {
             height: 12,
           ),
           Center(
+            // ignore: avoid_unnecessary_containers
             child: LoadingAnimationWidget.newtonCradle(
                 color: Colors.black, size: 100),
           )
