@@ -10,12 +10,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // Liste des textes que je vais utiliser pour chaque page
-  List<String> listes = ['Autonne Effet', 'Printemps Effet', 'Plaine d\'Ete'];
+  List<String> listes = [
+    'Autonne Effet',
+    'Printemps Effet',
+    'Plaine d\'Ete',
+    'Big Tree'
+  ];
 
   List<String> responses = [
     'Trees with different colors',
     'Beautifull flowers',
-    'The sun is so beautifull'
+    'The sun is so beautifull',
+    'A very beautfifull tree'
   ];
 
   // Déclaration du contrôleur de défilement
