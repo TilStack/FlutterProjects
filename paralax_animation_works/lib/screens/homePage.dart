@@ -9,12 +9,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  //Liste des textes que je vais utiliser pour chaque page
-  List<String> listes = [
-    'Autonne Effet',
-    'Printemps Effet',
-    'Plaine d\'Ete'
-  ];
+  // Liste des textes que je vais utiliser pour chaque page
+  List<String> listes = ['Autonne Effet', 'Printemps Effet', 'Plaine d\'Ete'];
 
   List<String> responses = [
     'Trees with different colors',
@@ -22,78 +18,96 @@ class _MyHomePageState extends State<MyHomePage> {
     'The sun is so beautifull'
   ];
 
+  // Déclaration du contrôleur de défilement
   late ScrollController scrollController;
 
   @override
   void initState() {
-    scrollController = ScrollController();
-    // TODO: implement initState
     super.initState();
+    // Initialisation du contrôleur de défilement
+    scrollController = ScrollController();
 
-    scrollController.addListener(() {setState(() {
-
-    });});
+    // Ajoute un écouteur pour mettre à jour l'état lorsqu'il y a un défilement
+    scrollController.addListener(() {
+      setState(() {});
+    });
   }
+
   @override
   Widget build(BuildContext context) {
+    // Obtenez la taille de l'écran
     Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Parallax Animation",style: GoogleFonts.poppins(),),
+        title: Text("Parallax Animation", style: GoogleFonts.poppins()),
         centerTitle: true,
       ),
       body: ListView.builder(
-        //Assigner le controller sur cette liste
+        // Assigner le contrôleur de défilement à cette liste
         controller: scrollController,
-          itemCount: listes.length,
-          itemBuilder: (context, index){
-            return Container(
-              height: size.height,
-              clipBehavior: Clip.hardEdge,
-              decoration: BoxDecoration(
-
-              ),
-              child: Stack(
-                children: [
-                  Container(
-                    transform: Matrix4.identity()/*Crée une matrice de transformation initiale*/..translate(
-                        0.0,//Pas de déplacement sur l'axe X
-                        scrollController.hasClients/*Vérifie si le contrôleur de défilement a des clients, */
-                            ? (-(index * size.height)+ scrollController.position.pixels)/2//
-                            :1.0
+        itemCount: listes.length, // Nombre d'éléments dans la liste
+        itemBuilder: (context, index) {
+          return Container(
+            height: size
+                .height, // La hauteur de chaque élément de la liste est égale à la hauteur de l'écran
+            clipBehavior: Clip
+                .hardEdge, // Couper le contenu qui dépasse les limites de manière nette
+            child: Stack(
+              children: [
+                Container(
+                  // Applique une transformation à la matrice pour créer un effet de parallaxe
+                  transform: Matrix4.identity()
+                    ..translate(
+                      0.0, // Pas de déplacement sur l'axe X
+                      scrollController.hasClients
+                          // Si le contrôleur a des clients, calcule la translation en Y en fonction de la position de défilement
+                          ? (-(index * size.height) +
+                                  scrollController.position.pixels) /
+                              2
+                          // Sinon, applique une translation par défaut
+                          : 1.0,
                     ),
-                    width: size.width,
-                    height: size.height,
-                    child: Image.asset("assets/${index+1}.jpg",fit: BoxFit.cover),//Le nom de mes iamges sont 1.jpg en montant.
+                  width: size
+                      .width, // La largeur de l'image est égale à la largeur de l'écran
+                  height: size
+                      .height, // La hauteur de l'image est égale à la hauteur de l'écran
+                  // Charge l'image depuis les assets, en ajustant la taille pour couvrir toute la zone
+                  child: Image.asset(
+                    "assets/${index + 1}.jpg",
+                    fit: BoxFit.cover,
                   ),
-                  Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          listes[index],
-                          style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 50,
-                            color: Colors.white
-                          ),
+                ),
+                // Centre le texte au milieu de chaque élément de la liste
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        listes[index], // Texte principal de l'élément
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 50,
+                          color: Colors.white,
                         ),
-                        Text(
-                          responses[index],
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 30,
-                              color: Colors.white.withOpacity(0.8)
-                          ),
+                      ),
+                      Text(
+                        responses[index], // Texte secondaire de l'élément
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 30,
+                          color: Colors.white.withOpacity(0.8),
                         ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            );
-      }),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }
