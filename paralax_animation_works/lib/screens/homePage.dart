@@ -58,7 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
             height: size
                 .height, // La hauteur de chaque élément de la liste est égale à la hauteur de l'écran
             clipBehavior: Clip
-                .hardEdge, // Couper le contenu qui dépasse les limites de manière nette
+                .hardEdge, // Couper le contenu qui dépasse les limites de manière nette,
+            decoration: BoxDecoration(),
             child: Stack(
               children: [
                 Container(
