@@ -12,20 +12,22 @@ class _ScreenPage6State extends State<ScreenPage6> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black.withOpacity(0.2),
       appBar: AppBar(
         leading: const BackButton(
           color: Colors.black,
         ),
         title: Text(
-          '',
+          'Simple method',
           style: GoogleFonts.poppins(),
         ),
       ),
       body: Center(
         child: Text(
-          '',
-          style: GoogleFonts.poppins(),
+          textAlign: TextAlign.center,
+          'Transition page without dependency',
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+          ),
         ),
       ),
     );

@@ -9,7 +9,6 @@ import 'package:transition_works/screens/screen_page3.dart';
 import 'package:transition_works/screens/screen_page4.dart';
 import 'package:transition_works/screens/screen_page6.dart';
 import 'package:turn_page_transition/turn_page_transition.dart';
-
 import '../utils/routefile.dart';
 import 'screen_page5.dart';
 
@@ -25,6 +24,7 @@ class _HomePageWorkState extends State<HomePageWork> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: const Color.fromARGB(115, 20, 20, 20),
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -41,14 +41,17 @@ class _HomePageWorkState extends State<HomePageWork> {
               padding: const EdgeInsets.all(5),
               margin: EdgeInsets.only(top: 10, bottom: size.height * 0.02),
               child: Image.asset(
-                "assets/png/til.png",
-                height: size.height / 2.5,
-                width: size.height / 2.5,
+                "assets/png/tilwhite.png",
+                height: size.height / 3,
+                width: size.height / 3,
               ),
             ),
             Text(
               'Examples of page transition',
-              style: GoogleFonts.poppins(fontSize: 18),
+              style: GoogleFonts.poppins(
+                fontSize: 18,
+                color: Colors.white,
+              ),
             ),
             //Using Get
             GestureDetector(
@@ -62,14 +65,16 @@ class _HomePageWorkState extends State<HomePageWork> {
               child: Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 150, vertical: 10),
-                margin: const EdgeInsets.symmetric(vertical: 5),
+                margin: const EdgeInsets.only(top: 10, bottom: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  border: Border.all(width: 1, color: Colors.black),
+                  border: Border.all(width: 1, color: Colors.white),
                 ),
                 child: Text(
-                  'Screen 1',
-                  style: GoogleFonts.roboto(),
+                  'Using Get',
+                  style: GoogleFonts.roboto(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -90,11 +95,13 @@ class _HomePageWorkState extends State<HomePageWork> {
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  border: Border.all(width: 1, color: Colors.black),
+                  border: Border.all(width: 1, color: Colors.white),
                 ),
                 child: Text(
-                  'Screen 2',
-                  style: GoogleFonts.roboto(),
+                  'Using a function',
+                  style: GoogleFonts.roboto(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -118,15 +125,17 @@ class _HomePageWorkState extends State<HomePageWork> {
               },
               child: Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 150, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 130, vertical: 10),
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  border: Border.all(width: 1, color: Colors.black),
+                  border: Border.all(width: 1, color: Colors.white),
                 ),
                 child: Text(
-                  'Screen 3',
-                  style: GoogleFonts.roboto(),
+                  'Using page_transition',
+                  style: GoogleFonts.roboto(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -147,15 +156,17 @@ class _HomePageWorkState extends State<HomePageWork> {
               },
               child: Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 150, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  border: Border.all(width: 1, color: Colors.black),
+                  border: Border.all(width: 1, color: Colors.white),
                 ),
                 child: Text(
-                  'Screen 4',
-                  style: GoogleFonts.roboto(),
+                  'Using turn_page_transition',
+                  style: GoogleFonts.roboto(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -173,15 +184,17 @@ class _HomePageWorkState extends State<HomePageWork> {
               },
               child: Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 150, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 110, vertical: 10),
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  border: Border.all(width: 1, color: Colors.black),
+                  border: Border.all(width: 1, color: Colors.white),
                 ),
                 child: Text(
-                  'Screen 5',
-                  style: GoogleFonts.roboto(),
+                  'Using concentric_transition',
+                  style: GoogleFonts.roboto(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -203,11 +216,16 @@ class _HomePageWorkState extends State<HomePageWork> {
                 margin: const EdgeInsets.symmetric(vertical: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  border: Border.all(width: 1, color: Colors.black),
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.white,
+                  ),
                 ),
                 child: Text(
-                  'Screen 5',
-                  style: GoogleFonts.roboto(),
+                  'Normal method',
+                  style: GoogleFonts.roboto(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
