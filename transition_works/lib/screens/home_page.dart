@@ -24,7 +24,7 @@ class _HomePageWorkState extends State<HomePageWork> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(115, 20, 20, 20),
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
