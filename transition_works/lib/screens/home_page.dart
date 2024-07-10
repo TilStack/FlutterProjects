@@ -47,7 +47,7 @@ class _HomePageWorkState extends State<HomePageWork> {
               ),
             ),
             Text(
-              'Examples of page transition',
+              'Examples of pages transitions',
               style: GoogleFonts.poppins(
                 fontSize: 18,
                 color: Colors.white,
@@ -85,7 +85,7 @@ class _HomePageWorkState extends State<HomePageWork> {
                 Navigator.push(
                   context,
                   createRoute(
-                    ScreenPage2(),
+                    const ScreenPage2(),
                   ),
                 );
               },
@@ -170,6 +170,7 @@ class _HomePageWorkState extends State<HomePageWork> {
                 ),
               ),
             ),
+
             //Using the dependency concentric_transition
             GestureDetector(
               onTap: () {
@@ -198,6 +199,7 @@ class _HomePageWorkState extends State<HomePageWork> {
                 ),
               ),
             ),
+
             //Using simple method
             GestureDetector(
               onTap: () {
