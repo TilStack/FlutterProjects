@@ -12,20 +12,22 @@ class _ScreenPage3State extends State<ScreenPage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black.withOpacity(0.2),
       appBar: AppBar(
         leading: const BackButton(
           color: Colors.black,
         ),
+        centerTitle: true,
         title: Text(
-          '',
+          'Page Transition',
           style: GoogleFonts.poppins(),
         ),
       ),
       body: Center(
         child: Text(
-          '',
-          style: GoogleFonts.poppins(),
+          'Page Transition',
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+          ),
         ),
       ),
     );

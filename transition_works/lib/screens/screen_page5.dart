@@ -12,20 +12,22 @@ class _ScreenPage5State extends State<ScreenPage5> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black.withOpacity(0.2),
       appBar: AppBar(
         leading: const BackButton(
           color: Colors.black,
         ),
         title: Text(
-          '',
+          'Concentric Transition',
           style: GoogleFonts.poppins(),
         ),
       ),
       body: Center(
         child: Text(
-          '',
-          style: GoogleFonts.poppins(),
+          'Concentric Transition Page',
+          textAlign: TextAlign.center,
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+          ),
         ),
       ),
     );
