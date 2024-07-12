@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         
         {
             "name": "anmation_icon_works",
@@ -21,6 +22,26 @@
         {
             "name": "anmation_icon_works (release mode)",
             "cwd": "anmation_icon_works",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Small_animation_works",
+            "cwd": "Small_animation_works",
+            "request": "launch",
+            "type": "dart",
+        },
+        {
+            "name": "Small_animation_works (profile mode)",
+            "cwd": "Small_animation_works",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Small_animation_works (release mode)",
+            "cwd": "Small_animation_works",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
