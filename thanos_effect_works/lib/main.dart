@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thanos_effect_works/screens/thanos_delete_page.dart';
-import 'package:thanos_effect_works/utils/constants.dart';
+//import 'package:thanos_effect_works/utils/constants.dart';
 
 void main() {
   runApp(const MyApp());

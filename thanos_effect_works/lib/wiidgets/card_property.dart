@@ -24,7 +24,6 @@ class _CardTitleState extends State<CardTitle> {
   @override
   Widget build(BuildContext context) {
     bool contentvalue = false;
-    bool contentvalue2 = false;
 
     return Snappable(
       key: key,
@@ -110,7 +109,7 @@ class _CardTitleState extends State<CardTitle> {
                   if (value) {
                     contentvalue = true;
                   } else {
-                    contentvalue2 = true;
+                    print(contentvalue);
                   }
                 });
                 snap();

@@ -1,167 +1,185 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-
-        
-        {
-            "name": "anmation_icon_works",
-            "cwd": "anmation_icon_works",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "anmation_icon_works (profile mode)",
-            "cwd": "anmation_icon_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "anmation_icon_works (release mode)",
-            "cwd": "anmation_icon_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "Small_animation_works",
-            "cwd": "Small_animation_works",
-            "request": "launch",
-            "type": "dart",
-        },
-        {
-            "name": "Small_animation_works (profile mode)",
-            "cwd": "Small_animation_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "Small_animation_works (release mode)",
-            "cwd": "Small_animation_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "loading_effet_works",
-            "cwd": "loading_effet_works",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "loading_effet_works (profile mode)",
-            "cwd": "loading_effet_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "loading_effet_works (release mode)",
-            "cwd": "loading_effet_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "navigator_bar_works",
-            "cwd": "navigator_bar_works",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "navigator_bar_works (profile mode)",
-            "cwd": "navigator_bar_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "navigator_bar_works (release mode)",
-            "cwd": "navigator_bar_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "paralax_animation_works",
-            "cwd": "paralax_animation_works",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "paralax_animation_works (profile mode)",
-            "cwd": "paralax_animation_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "paralax_animation_works (release mode)",
-            "cwd": "paralax_animation_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "thanos_effect_works",
-            "cwd": "thanos_effect_works",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "thanos_effect_works (profile mode)",
-            "cwd": "thanos_effect_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "thanos_effect_works (release mode)",
-            "cwd": "thanos_effect_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "themedata_works",
-            "cwd": "themedata_works",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "themedata_works (profile mode)",
-            "cwd": "themedata_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "themedata_works (release mode)",
-            "cwd": "themedata_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "transition_works",
-            "cwd": "transition_works",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "transition_works (profile mode)",
-            "cwd": "transition_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "transition_works (release mode)",
-            "cwd": "transition_works",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "anmation_icon_works",
+      "cwd": "anmation_icon_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "anmation_icon_works (profile mode)",
+      "cwd": "anmation_icon_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "anmation_icon_works (release mode)",
+      "cwd": "anmation_icon_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "Small_animation_works",
+      "cwd": "Small_animation_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Small_animation_works (profile mode)",
+      "cwd": "Small_animation_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "Small_animation_works (release mode)",
+      "cwd": "Small_animation_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "loading_effet_works",
+      "cwd": "loading_effet_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "loading_effet_works (profile mode)",
+      "cwd": "loading_effet_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "loading_effet_works (release mode)",
+      "cwd": "loading_effet_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "navigator_bar_works",
+      "cwd": "navigator_bar_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "navigator_bar_works (profile mode)",
+      "cwd": "navigator_bar_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "navigator_bar_works (release mode)",
+      "cwd": "navigator_bar_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "paralax_animation_works",
+      "cwd": "paralax_animation_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "paralax_animation_works (profile mode)",
+      "cwd": "paralax_animation_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "paralax_animation_works (release mode)",
+      "cwd": "paralax_animation_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "thanos_effect_works",
+      "cwd": "thanos_effect_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "thanos_effect_works (profile mode)",
+      "cwd": "thanos_effect_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "thanos_effect_works (release mode)",
+      "cwd": "thanos_effect_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "themedata_works",
+      "cwd": "themedata_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "themedata_works (profile mode)",
+      "cwd": "themedata_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "themedata_works (release mode)",
+      "cwd": "themedata_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "transition_works",
+      "cwd": "transition_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "transition_works (profile mode)",
+      "cwd": "transition_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "transition_works (release mode)",
+      "cwd": "transition_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "listview_animation_works",
+      "cwd": "listview_animation_works",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "listview_animation_works (profile mode)",
+      "cwd": "listview_animation_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "listview_animation_works (release mode)",
+      "cwd": "listview_animation_works",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
 }
